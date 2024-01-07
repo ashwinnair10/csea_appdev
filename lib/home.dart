@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables
 
 import 'package:csea_appdev/box.dart';
+import 'package:csea_appdev/profilebox.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -16,9 +17,20 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 15, 20, 36),
       body: SingleChildScrollView(
-        padding: EdgeInsets.fromLTRB(30, 200, 30, 20),
+        padding: EdgeInsets.fromLTRB(20, 100, 20, 20),
         child: Column(
           children: [
+            buildprofilebox(
+              context,
+              'Work',
+              '5 hrs',
+              'Yesterday - 7 hrs',
+              'work',
+              Color.fromARGB(255, 255, 140, 102),
+            ),
+            SizedBox(
+              height: 20,
+            ),
             buildbox(
               context,
               'Work',
