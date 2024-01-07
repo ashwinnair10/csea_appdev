@@ -26,6 +26,32 @@ class _ExpandableBoxState extends State<ExpandableBox> {
     return Stack(
       alignment: Alignment.bottomCenter,
       children: [
+        Container(
+          height: 216,
+          padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+          width: double.infinity,
+          decoration: BoxDecoration(
+            color: widget.c,
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Column(
+                children: [
+                  Container(
+                    width: 90,
+                    height: 70,
+                    child: Image.asset(
+                      'assets/${widget.str4}.png',
+                      fit: BoxFit.fitWidth,
+                    ),
+                  )
+                ],
+              ),
+            ],
+          ),
+        ),
         GestureDetector(
           onTap: () {
             setState(() {
@@ -34,82 +60,71 @@ class _ExpandableBoxState extends State<ExpandableBox> {
           },
           child: AnimatedContainer(
             duration: Duration(milliseconds: 300),
-            height: isExpanded ? 300 : 200,
-            padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+            height: isExpanded ? 216 : 156,
+            padding: EdgeInsets.fromLTRB(30, 20, 20, 20),
             width: double.infinity,
             decoration: BoxDecoration(
-              color: widget.c,
               borderRadius: BorderRadius.circular(10),
+              color: Color.fromARGB(255, 28, 31, 74),
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Column(
+                Row(
                   children: [
-                    Container(
-                      width: 90,
-                      height: 70,
-                      child: Image.asset(
-                        'assets/${widget.str4}.png',
-                        fit: BoxFit.fitWidth,
+                    Text(
+                      widget.str1,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: 'Rubik',
                       ),
-                    )
+                    ),
+                    Spacer(),
+                    IconButton(
+                      onPressed: () {
+                        setState(() {
+                          isExpanded = !isExpanded;
+                        });
+                      },
+                      icon: Icon(
+                        Icons.more_horiz,
+                        color: const Color.fromARGB(255, 189, 193, 255),
+                      ),
+                    ),
                   ],
                 ),
-              ],
-            ),
-          ),
-        ),
-        Container(
-          padding: EdgeInsets.fromLTRB(30, 20, 20, 20),
-          height: 150,
-          width: double.infinity,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            color: Color.fromARGB(255, 28, 31, 74),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  Text(
-                    widget.str1,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w500,
-                      fontFamily: 'Rubik',
+                Row(
+                  children: [
+                    Text(
+                      widget.str2,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 35,
+                        fontWeight: FontWeight.w300,
+                        fontFamily: 'Rubik',
+                      ),
                     ),
-                  ),
-                  Spacer(),
-                  IconButton(
-                    onPressed: () {
-                      setState(() {
-                        isExpanded = !isExpanded;
-                      });
-                    },
-                    icon: Icon(
-                      Icons.more_horiz,
-                      color: const Color.fromARGB(255, 189, 193, 255),
+                    Spacer(),
+                    Text(
+                      widget.str3,
+                      style: TextStyle(
+                        color: const Color.fromARGB(255, 189, 193, 255),
+                        fontSize: 16,
+                        fontWeight: FontWeight.w300,
+                        fontFamily: 'Rubik',
+                      ),
                     ),
+                  ],
+                ),
+                if (isExpanded)
+                  SizedBox(
+                    height: 30,
                   ),
-                ],
-              ),
-              Row(
-                children: [
+                if (isExpanded)
                   Text(
-                    widget.str2,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 35,
-                      fontWeight: FontWeight.w300,
-                      fontFamily: 'Rubik',
-                    ),
-                  ),
-                  Spacer(),
-                  Text(
-                    widget.str3,
+                    'Hello World',
                     style: TextStyle(
                       color: const Color.fromARGB(255, 189, 193, 255),
                       fontSize: 16,
@@ -117,107 +132,11 @@ class _ExpandableBoxState extends State<ExpandableBox> {
                       fontFamily: 'Rubik',
                     ),
                   ),
-                ],
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ],
     );
   }
 }
-
-/*import 'package:flutter/material.dart';
-
-Widget buildbox(BuildContext context, String str1, str2, str3, str4, Color c) {
-  return Stack(
-    alignment: Alignment.bottomCenter,
-    children: [
-      Container(
-        height: 200,
-        padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-        width: double.infinity,
-        decoration: BoxDecoration(
-          color: c,
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Column(
-              children: [
-                Container(
-                  width: 90,
-                  height: 70,
-                  child: Image.asset(
-                    'assets/$str4.png',
-                    fit: BoxFit.fitWidth,
-                  ),
-                )
-              ],
-            ),
-          ],
-        ),
-      ),
-      Container(
-        padding: EdgeInsets.fromLTRB(30, 20, 20, 20),
-        height: 150,
-        width: double.infinity,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          color: Color.fromARGB(255, 28, 31, 74),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                Text(
-                  str1,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500,
-                    fontFamily: 'Rubik',
-                  ),
-                ),
-                Spacer(),
-                IconButton(
-                  onPressed: () => {},
-                  icon: Icon(
-                    Icons.more_horiz,
-                    color: const Color.fromARGB(255, 189, 193, 255),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Text(
-                  str2,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 35,
-                    fontWeight: FontWeight.w300,
-                    fontFamily: 'Rubik',
-                  ),
-                ),
-                Spacer(),
-                Text(
-                  str3,
-                  style: TextStyle(
-                    color: const Color.fromARGB(255, 189, 193, 255),
-                    fontSize: 16,
-                    fontWeight: FontWeight.w300,
-                    fontFamily: 'Rubik',
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-    ],
-  );
-}
-*/
