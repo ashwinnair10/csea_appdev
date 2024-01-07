@@ -11,6 +11,7 @@ Widget buildmonthlybar(BuildContext context) {
         str2: '103 hrs',
         str3: 'Last Month - 128 hrs',
         str4: 'work',
+        str5: 'You have worked for 103 hours this month',
         c: Color.fromARGB(255, 255, 140, 102),
       ),
       SizedBox(
@@ -21,6 +22,7 @@ Widget buildmonthlybar(BuildContext context) {
         str2: '23 hrs',
         str3: 'Last Month - 29 hrs',
         str4: 'play',
+        str5: 'You have played for 23 hours this month',
         c: Color.fromARGB(255, 86, 194, 230),
       ),
       SizedBox(
@@ -31,6 +33,7 @@ Widget buildmonthlybar(BuildContext context) {
         str2: '13 hrs',
         str3: 'Last Month - 19 hrs',
         str4: 'study',
+        str5: 'You have played for 23 hours this month',
         c: Color.fromARGB(255, 255, 92, 124),
       ),
       SizedBox(
@@ -41,6 +44,7 @@ Widget buildmonthlybar(BuildContext context) {
         str2: '11 hrs',
         str3: 'Last Month - 18 hrs',
         str4: 'exercise',
+        str5: 'You have exercised for 11 hours this month',
         c: Color.fromARGB(255, 74, 207, 129),
       ),
       SizedBox(
@@ -51,6 +55,7 @@ Widget buildmonthlybar(BuildContext context) {
         str2: '21 hrs',
         str3: 'Last Month - 23 hrs',
         str4: 'social',
+        str5: 'You have socialized for 21 hours this month',
         c: Color.fromARGB(255, 117, 54, 211),
       ),
       SizedBox(
@@ -61,6 +66,7 @@ Widget buildmonthlybar(BuildContext context) {
         str2: '7 hrs',
         str3: 'Last Month - 11 hrs',
         str4: 'selfcare',
+        str5: 'You have engaged in self-care for 7 hours this month',
         c: Color.fromARGB(255, 241, 198, 91),
       ),
       SizedBox(

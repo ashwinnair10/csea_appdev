@@ -11,6 +11,7 @@ Widget builddailybar(BuildContext context) {
         str2: '5 hrs',
         str3: 'Yesterday - 7 hrs',
         str4: 'work',
+        str5: 'You have worked for 5 hours today',
         c: Color.fromARGB(255, 255, 140, 102),
       ),
       SizedBox(
@@ -21,6 +22,7 @@ Widget builddailybar(BuildContext context) {
         str2: '1 hrs',
         str3: 'Yesterday - 2 hrs',
         str4: 'play',
+        str5: 'You have played for 1 hours today',
         c: Color.fromARGB(255, 86, 194, 230),
       ),
       SizedBox(
@@ -31,6 +33,7 @@ Widget builddailybar(BuildContext context) {
         str2: '0 hrs',
         str3: 'Yesterday - 1 hrs',
         str4: 'study',
+        str5: 'You have studied for 0 hours today',
         c: Color.fromARGB(255, 255, 92, 124),
       ),
       SizedBox(
@@ -41,6 +44,7 @@ Widget builddailybar(BuildContext context) {
         str2: '1 hrs',
         str3: 'Yesterday - 1 hrs',
         str4: 'exercise',
+        str5: 'You have exercised for 1 hours today',
         c: Color.fromARGB(255, 74, 207, 129),
       ),
       SizedBox(
@@ -51,6 +55,7 @@ Widget builddailybar(BuildContext context) {
         str2: '1 hrs',
         str3: 'Yesterday - 3 hrs',
         str4: 'social',
+        str5: 'You have socialized for 1 hours today',
         c: Color.fromARGB(255, 117, 54, 211),
       ),
       SizedBox(
@@ -61,6 +66,7 @@ Widget builddailybar(BuildContext context) {
         str2: '0 hrs',
         str3: 'Yesterday - 1 hrs',
         str4: 'selfcare',
+        str5: 'You have engaged in self-care for 0 hours today',
         c: Color.fromARGB(255, 241, 198, 91),
       ),
       SizedBox(

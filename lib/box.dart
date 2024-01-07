@@ -1,8 +1,8 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, library_private_types_in_public_api
 import 'package:flutter/material.dart';
 
 class ExpandableBox extends StatefulWidget {
-  final String str1, str2, str3, str4;
+  final String str1, str2, str3, str4, str5;
   final Color c;
 
   const ExpandableBox({
@@ -11,6 +11,7 @@ class ExpandableBox extends StatefulWidget {
     required this.str2,
     required this.str3,
     required this.str4,
+    required this.str5,
     required this.c,
   }) : super(key: key);
 
@@ -20,6 +21,7 @@ class ExpandableBox extends StatefulWidget {
 
 class _ExpandableBoxState extends State<ExpandableBox> {
   bool isExpanded = false;
+  bool extratext = false;
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +41,7 @@ class _ExpandableBoxState extends State<ExpandableBox> {
             children: [
               Column(
                 children: [
-                  Container(
+                  SizedBox(
                     width: 90,
                     height: 70,
                     child: Image.asset(
@@ -56,6 +58,15 @@ class _ExpandableBoxState extends State<ExpandableBox> {
           onTap: () {
             setState(() {
               isExpanded = !isExpanded;
+              if (isExpanded) {
+                Future.delayed(Duration(milliseconds: 300), () {
+                  setState(() {
+                    extratext = true;
+                  });
+                });
+              } else {
+                extratext = false;
+              }
             });
           },
           child: AnimatedContainer(
@@ -86,6 +97,15 @@ class _ExpandableBoxState extends State<ExpandableBox> {
                       onPressed: () {
                         setState(() {
                           isExpanded = !isExpanded;
+                          if (isExpanded) {
+                            Future.delayed(Duration(milliseconds: 300), () {
+                              setState(() {
+                                extratext = true;
+                              });
+                            });
+                          } else {
+                            extratext = false;
+                          }
                         });
                       },
                       icon: Icon(
@@ -118,13 +138,13 @@ class _ExpandableBoxState extends State<ExpandableBox> {
                     ),
                   ],
                 ),
-                if (isExpanded)
+                if (isExpanded && extratext)
                   SizedBox(
                     height: 30,
                   ),
-                if (isExpanded)
+                if (isExpanded && extratext)
                   Text(
-                    'Hello World',
+                    widget.str5,
                     style: TextStyle(
                       color: const Color.fromARGB(255, 189, 193, 255),
                       fontSize: 16,

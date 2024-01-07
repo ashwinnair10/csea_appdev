@@ -11,6 +11,7 @@ Widget buildweeklybar(BuildContext context) {
         str2: '32 hrs',
         str3: 'Last week - 36 hrs',
         str4: 'work',
+        str5: 'You have worked for 32 hours this week',
         c: Color.fromARGB(255, 255, 140, 102),
       ),
       SizedBox(
@@ -21,6 +22,7 @@ Widget buildweeklybar(BuildContext context) {
         str2: '18 hrs',
         str3: 'Last week - 8 hrs',
         str4: 'play',
+        str5: 'You have played for 18 hours this week',
         c: Color.fromARGB(255, 86, 194, 230),
       ),
       SizedBox(
@@ -31,6 +33,7 @@ Widget buildweeklybar(BuildContext context) {
         str2: '4 hrs',
         str3: 'Last week - 7 hrs',
         str4: 'study',
+        str5: 'You have studied for 4 hours this week',
         c: Color.fromARGB(255, 255, 92, 124),
       ),
       SizedBox(
@@ -41,6 +44,7 @@ Widget buildweeklybar(BuildContext context) {
         str2: '4 hrs',
         str3: 'Last week - 5 hrs',
         str4: 'exercise',
+        str5: 'You have exercised for 4 hours this week',
         c: Color.fromARGB(255, 74, 207, 129),
       ),
       SizedBox(
@@ -51,6 +55,7 @@ Widget buildweeklybar(BuildContext context) {
         str2: '5 hrs',
         str3: 'Last week - 10 hrs',
         str4: 'social',
+        str5: 'You have socialized for 5 hours this week',
         c: Color.fromARGB(255, 117, 54, 211),
       ),
       SizedBox(
@@ -61,6 +66,7 @@ Widget buildweeklybar(BuildContext context) {
         str2: '2 hrs',
         str3: 'Last week - 2 hrs',
         str4: 'selfcare',
+        str5: 'You have engaged in self-care for 2 hours this week',
         c: Color.fromARGB(255, 241, 198, 91),
       ),
       SizedBox(
