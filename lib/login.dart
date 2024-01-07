@@ -109,7 +109,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Stack(
-                      alignment: Alignment.bottomLeft,
+                      alignment: Alignment.center,
                       children: [
                         Icon(
                           Icons.timer,
@@ -118,7 +118,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         Icon(
                           Icons.timer,
-                          size: 126,
+                          size: 100,
                           color: Color.fromARGB(255, 88, 71, 235),
                         ),
                       ],
