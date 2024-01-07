@@ -59,7 +59,7 @@ Widget buildbox(BuildContext context, String str1, str2, str3, str4, Color c) {
                   onPressed: () => {},
                   icon: Icon(
                     Icons.more_horiz,
-                    color: Colors.white,
+                    color: const Color.fromARGB(255, 189, 193, 255),
                   ),
                 ),
               ],
@@ -79,7 +79,7 @@ Widget buildbox(BuildContext context, String str1, str2, str3, str4, Color c) {
                 Text(
                   str3,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: const Color.fromARGB(255, 189, 193, 255),
                     fontSize: 16,
                     fontWeight: FontWeight.w300,
                     fontFamily: 'Rubik',

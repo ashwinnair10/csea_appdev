@@ -34,6 +34,8 @@ class _HomePageState extends State<HomePage> {
               '5 hrs',
               'Yesterday - 7 hrs',
               'work',
+              'person',
+              'Jeremy Robson',
               Color.fromARGB(255, 255, 140, 102),
               check,
               (int value) {

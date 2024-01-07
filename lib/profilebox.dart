@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-Widget buildprofilebox(BuildContext context, String str1, str2, str3, str4,
-    Color c, int check, Function(int) onTabPressed) {
+Widget buildprofilebox(BuildContext context, String str1, str2, str3, str4, img,
+    name, Color c, int check, Function(int) onTabPressed) {
   return DefaultTabController(
     length: 3,
     child: Stack(
@@ -104,7 +104,7 @@ Widget buildprofilebox(BuildContext context, String str1, str2, str3, str4,
                   ),
                   CircleAvatar(
                     radius: 45,
-                    backgroundImage: AssetImage('assets/person.png'),
+                    backgroundImage: AssetImage('assets/$img.png'),
                   ),
                 ],
               ),
@@ -127,7 +127,7 @@ Widget buildprofilebox(BuildContext context, String str1, str2, str3, str4,
                       ),
                     ),
                     Text(
-                      'Jeremy Robson',
+                      name,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(

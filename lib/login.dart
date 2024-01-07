@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, library_private_types_in_public_api, use_key_in_widget_constructors, sized_box_for_whitespace
+// ignore_for_file: prefer_const_constructors, library_private_types_in_public_api, use_key_in_widget_constructors, sized_box_for_whitespace, prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
 import './home.dart';
 
@@ -13,7 +13,6 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "WELCOME",
       home: LoginScreen(),
       debugShowCheckedModeBanner: false,
     );
@@ -47,14 +46,30 @@ class _LoginScreenState extends State<LoginScreen> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text("Login Failed"),
-            content: Text("Invalid email or password."),
+            backgroundColor: const Color.fromARGB(255, 189, 193, 255),
+            title: Text(
+              "Login Failed",
+              style: TextStyle(
+                fontFamily: 'Rubik',
+              ),
+            ),
+            content: Text(
+              "Invalid email/password.",
+              style: TextStyle(
+                fontFamily: 'Rubik',
+              ),
+            ),
             actions: [
               TextButton(
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
-                child: Text("OK"),
+                child: Text(
+                  "OK",
+                  style: TextStyle(
+                    fontFamily: 'Rubik',
+                  ),
+                ),
               ),
             ],
           );
@@ -70,19 +85,22 @@ class _LoginScreenState extends State<LoginScreen> {
         debugShowCheckedModeBanner: false,
         home: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.white,
+            backgroundColor: Color.fromARGB(255, 15, 20, 36),
             elevation: 0,
           ),
+          backgroundColor: Color.fromARGB(255, 15, 20, 36),
           body: Center(
-            child: Text('Loading'),
-          ),
+              child: CircularProgressIndicator(
+            color: const Color.fromARGB(255, 189, 193, 255),
+            strokeWidth: 3,
+          )),
         ),
       );
     } else {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-          backgroundColor: Colors.white,
+          backgroundColor: Color.fromARGB(255, 15, 20, 36),
           body: Center(
             child: SingleChildScrollView(
               child: Padding(
@@ -90,20 +108,74 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    SizedBox(height: 150),
-                    SizedBox(
-                      height: 10,
+                    Stack(
+                      alignment: Alignment.bottomLeft,
+                      children: [
+                        Icon(
+                          Icons.timer,
+                          size: 150,
+                          color: Color.fromARGB(255, 255, 255, 255),
+                        ),
+                        Icon(
+                          Icons.timer,
+                          size: 126,
+                          color: Color.fromARGB(255, 88, 71, 235),
+                        ),
+                      ],
                     ),
                     SizedBox(
-                      height: 25,
+                      height: 0,
+                    ),
+                    Text(
+                      'Time Tracker',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Rubik',
+                        fontSize: 40,
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
                     SizedBox(
-                      width: 375,
+                      height: 50,
+                    ),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width - 50,
                       child: TextField(
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
                         controller: emailController,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
-                          labelText: "Username or email",
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: const Color.fromARGB(255, 189, 193, 255),
+                              width: 2,
+                            ),
+                          ),
+                          hintText: "Email",
+                          hintStyle: TextStyle(
+                            color: const Color.fromARGB(255, 189, 193, 255),
+                            fontFamily: 'Rubik',
+                          ),
+                          labelText: 'Email',
+                          labelStyle: TextStyle(
+                            color: const Color.fromARGB(255, 189, 193, 255),
+                            fontFamily: 'Rubik',
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: const Color.fromARGB(255, 189, 193, 255),
+                              width: 1,
+                            ),
+                          ),
+                          errorBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(6.0),
+                            borderSide: BorderSide(
+                              width: 2,
+                              color: Colors.red,
+                            ),
+                          ),
                         ),
                       ),
                     ),
@@ -111,13 +183,44 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: 15,
                     ),
                     SizedBox(
-                      width: 375,
+                      width: MediaQuery.of(context).size.width - 50,
                       child: TextField(
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
                         controller: passwordController,
                         obscureText: true,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
-                          labelText: "Password",
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: const Color.fromARGB(255, 189, 193, 255),
+                              width: 2,
+                            ),
+                          ),
+                          hintText: "Password",
+                          hintStyle: TextStyle(
+                            color: const Color.fromARGB(255, 189, 193, 255),
+                            fontFamily: 'Rubik',
+                          ),
+                          labelText: 'Password',
+                          labelStyle: TextStyle(
+                            color: const Color.fromARGB(255, 189, 193, 255),
+                            fontFamily: 'Rubik',
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: const Color.fromARGB(255, 189, 193, 255),
+                              width: 1,
+                            ),
+                          ),
+                          errorBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(6.0),
+                            borderSide: BorderSide(
+                              width: 2,
+                              color: Colors.red,
+                            ),
+                          ),
                         ),
                       ),
                     ),
@@ -125,32 +228,22 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: 15,
                     ),
                     Container(
-                      width: 375,
+                      width: MediaQuery.of(context).size.width - 50,
                       height: 50,
                       child: ElevatedButton(
                         style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all(
-                              Color.fromARGB(255, 39, 125, 255)),
+                              Color.fromARGB(255, 37, 130, 161)),
                         ),
                         onPressed: login,
                         child: Text(
                           'Login',
-                          style: TextStyle(fontSize: 18),
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            fontFamily: 'Rubik',
+                          ),
                         ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text("or"),
-                    SizedBox(
-                      height: 0,
-                    ),
-                    TextButton(
-                      onPressed: () => {},
-                      child: Text(
-                        "Forgot Password?",
-                        style: TextStyle(fontSize: 15),
                       ),
                     ),
                   ],
