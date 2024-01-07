@@ -24,7 +24,8 @@ class _HomePageState extends State<HomePage> {
               'Work',
               '5 hrs',
               'Yesterday - 7 hrs',
-              Colors.orange,
+              'work',
+              Color.fromARGB(255, 255, 140, 102),
             ),
             SizedBox(
               height: 20,
@@ -34,7 +35,8 @@ class _HomePageState extends State<HomePage> {
               'Play',
               '1 hrs',
               'Yesterday - 2 hrs',
-              Colors.cyan,
+              'play',
+              Color.fromARGB(255, 86, 194, 230),
             ),
             SizedBox(
               height: 20,
@@ -44,7 +46,8 @@ class _HomePageState extends State<HomePage> {
               'Study',
               '0 hrs',
               'Yesterday - 1 hrs',
-              Colors.pink,
+              'study',
+              Color.fromARGB(255, 255, 92, 124),
             ),
             SizedBox(
               height: 20,
@@ -54,7 +57,8 @@ class _HomePageState extends State<HomePage> {
               'Exercise',
               '1 hrs',
               'Yesterday - 1 hrs',
-              Colors.green,
+              'exercise',
+              Color.fromARGB(255, 74, 207, 129),
             ),
             SizedBox(
               height: 20,
@@ -64,7 +68,8 @@ class _HomePageState extends State<HomePage> {
               'Social',
               '1 hrs',
               'Yesterday - 3 hrs',
-              Colors.purple,
+              'social',
+              Color.fromARGB(255, 117, 54, 211),
             ),
             SizedBox(
               height: 20,
@@ -74,7 +79,8 @@ class _HomePageState extends State<HomePage> {
               'Self-care',
               '0 hrs',
               'Yesterday - 1 hrs',
-              Colors.yellow,
+              'selfcare',
+              Color.fromARGB(255, 241, 198, 91),
             ),
             SizedBox(
               height: 20,

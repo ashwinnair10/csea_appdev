@@ -2,26 +2,35 @@
 
 import 'package:flutter/material.dart';
 
-Widget buildbox(BuildContext context, String str1, str2, str3, Color c) {
+Widget buildbox(BuildContext context, String str1, str2, str3, str4, Color c) {
   return Stack(
     alignment: Alignment.bottomCenter,
     children: [
       Container(
         height: 200,
+        padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
         width: double.infinity,
         decoration: BoxDecoration(
           color: c,
           borderRadius: BorderRadius.circular(10),
         ),
-      ),
-      Container(
-        height: 200,
-        width: double.infinity,
-        decoration: BoxDecoration(
-          color: Colors.transparent,
-          borderRadius: BorderRadius.circular(10),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Column(
+              children: [
+                Container(
+                  width: 90,
+                  height: 70,
+                  child: Image.asset(
+                    'assets/$str4.png',
+                    fit: BoxFit.fitWidth,
+                  ),
+                )
+              ],
+            ),
+          ],
         ),
-        child: Image.asset('assets/study.png'),
       ),
       Container(
         padding: EdgeInsets.fromLTRB(30, 20, 20, 20),
