@@ -15,6 +15,15 @@ Widget buildbox(BuildContext context, String str1, str2, str3, Color c) {
         ),
       ),
       Container(
+        height: 200,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: Colors.transparent,
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Image.asset('assets/study.png'),
+      ),
+      Container(
         padding: EdgeInsets.fromLTRB(30, 20, 20, 20),
         height: 150,
         width: double.infinity,
